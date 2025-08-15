@@ -7,7 +7,8 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import OneHotEncoder
 
 # Load the ramen dataset
-df = pd.read_csv("https://github.com/narenkarthick90/Ramen_Bro/blob/master/instant_data.csv", encoding="cp1252")
+url = "https://raw.githubusercontent.com/narenkarthick90/Ramen_Bro/master/instant_data.csv"
+df = pd.read_csv(url, encoding="latin1")
 
 # Clean the data
 df['Stars'] = pd.to_numeric(df['Stars'], errors='coerce')
