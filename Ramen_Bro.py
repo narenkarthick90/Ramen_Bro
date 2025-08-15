@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import OneHotEncoder
 
 # Load the ramen dataset
-df = pd.read_csv("N:\Random projects\Ramen_Bro\instant_data.csv", encoding="cp1252")
+df = pd.read_csv("https://github.com/narenkarthick90/Ramen_Bro/blob/master/instant_data.csv", encoding="cp1252")
 
 # Clean the data
 df['Stars'] = pd.to_numeric(df['Stars'], errors='coerce')
@@ -41,4 +41,3 @@ if st.button("Predict Rating"):
     prediction = model.predict(input_encoded)[0]
 
     st.success(f"Predicted Rating: ⭐ {prediction:.2f}")
-
